@@ -1,0 +1,22 @@
+select {
+    margin-left: auto;
+    border: none;
+    border-left: .5px solid #ffffff2f;
+    border-right: .5px solid #ffffff2f;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+}
+
+option {
+    color: #000000;
+}
+
+#openSideBar{
+    position: absolute;
+    top: 0;
+}

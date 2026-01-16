@@ -1,13 +1,263 @@
-<!doctype html>
+<!-- صفحه اساسيه -->
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>photographer-portfolio</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>مشروع تصوير / Ahmed developer</title>
+        <link rel="stylesheet" href="style/Main.css">
+        <link rel="stylesheet" href="style/home01.css">
+        <link rel="stylesheet" href="style/aboutMe02.css">
+        <link rel="stylesheet" href="style/Exhibition03.css">
+        <link rel="stylesheet" href="style/services04.css">
+        <link rel="stylesheet" href="style/contectMe05.css">
+        <link rel="stylesheet" href="style/header06.css">
+    </head>
+
+    <body>
+        <!-- قائمه يلي فوق اول شي  -->
+        <button type="button" id="openSideBar"><img src="img/svg/menu.svg" alt=""></button>
+        <header id="navbar-section">
+            <nav class="nav-links">
+                <div class="logo">
+                    <button type="button" id="closeSideBar">X</button>
+                    <img src="img/svg/serivec-svgs/camera-temp.svg" alt="">
+                </div>
+                <ul>
+                    <li><a href="#home-section"></a></li>
+                    <li><a href="#about-me"></a></li>
+                    <li><a href="#Exhibition-section"></a></li>
+                    <li><a href="#services-section"></a></li>
+                    <li><a href="#contect-me-section"></a></li>
+
+                    <select id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                    </select>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- القسم الرئيسي -->
+        <main>
+            <!-- home section start -->
+            <section id="home-section">
+                <div class="home-filter"></div>
+                <video src="video/potoPro.mp4" autoplay muted loop></video>
+                <header class="home-header">
+                    <h1 class="Home-Change-lang">مصور <span class="Home-Change-lang">احمد</span></h1>
+                    <p class="Home-Change-lang">نلتقط اللحظات الثمينة ونحولها إلى ذكريات خالدة</p>
+                    <a href="#Exhibition-section" id="Exhibition" class="Home-Change-lang">شاهد اعمالي</a>
+                </header>
+            </section>
+            <!-- home section end -->
+
+            <!-- about me section start -->
+            <section id="about-me">
+                <h1 class="Main-Change-Lang"></h1>
+                <article class="about-me-child">
+                    <header>
+                        <img src="img/profiletestimg.jpeg" alt="">
+                    </header>
+
+                    <main>
+                        
+                        <p class="about-me-text Main-Change-Lang">
+                            
+                        </p>
+                        <ul class="article-child">
+
+                            <li class="achievements">
+                                <img class="elemnts" src="img/svg/about-svgs/workspace_premium_24dp_E17100_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                                <strong class="elemnts Main-Change-Lang"></strong>
+                                <p class="elemnts Main-Change-Lang"></p>
+                            </li>
+        
+                            <li class="achievements">
+                                <img class="elemnts" src="img/svg/about-svgs/heartOrng.svg" alt="">
+                                <strong class="elemnts Main-Change-Lang"></strong>
+                                <p class="elemnts Main-Change-Lang"></p>
+                            </li>
+        
+                            <li class="achievements">
+                                <img class="elemnts" src="img/svg/about-svgs/cameraOrng.svg" alt="">
+                                <strong class="elemnts Main-Change-Lang"></strong>
+                                <p class="elemnts Main-Change-Lang"></p>
+                            </li>
+                        </ul>
+                    </main>
+                </article>
+            </section>
+            <!-- about me end -->
+
+            <!-- exhibition start -->
+            <section id="Exhibition-section">
+                <header>
+                    <h1 class="Exhibition-change-lang"></h1>
+                    <p class="Exhibition-change-lang"></p>
+                </header>
+
+                <main>
+                    <section class="cards-container">
+                        <article class="card">
+
+                            <a href="html/nature/nature.html">
+                                <figure class="card-child-img">
+                                    <img src="img/cuteLook.jpeg" alt="">
+                                </figure>
+
+                                <div class="card-child-text">
+                                    <h3 class="Exhibition-change-lang"></h3>
+                                    <p class="Exhibition-change-lang"></p>
+                                </div>
+                            </a>
+
+                        </article>
+                        
+                        <article class="card">
+
+                            <a href="html/weddings/weddings.html">
+                                <figure class="card-child-img">
+                                    <img src="img/marry.jpeg" alt="">
+                                </figure>
+
+                                <div class="card-child-text">
+                                    <h3 class="Exhibition-change-lang"></h3>
+                                    <p class="Exhibition-change-lang"></p>
+                                </div>
+                            </a>
+
+                        </article>
+                        <article class="card">
+
+                            <a href="html/professional-photo/professional-photograpy.html">
+                                <figure class="card-child-img">
+                                    <img src="img/profiletestimg.jpeg" alt="">
+
+                                </figure>
+
+                                <div class="card-child-text">
+                                    <h3 class="Exhibition-change-lang"></h3>
+                                    <p class="Exhibition-change-lang"></p>
+                                </div>
+                            </a>
+
+                        </article>
+                        <article class="card">
+
+                            <a href="html/products/product.html">
+                                <figure class="card-child-img">
+                                    <img src="img/cofe.webp" alt="">
+
+                                </figure>
+
+                                <div class="card-child-text">
+                                    <h3 class="Exhibition-change-lang"></h3>
+                                    <p class="Exhibition-change-lang"></p>
+                                </div>
+                            </a>
+
+                        </article>
+                        <article class="card">
+
+                            <a href="html/events/events.html">
+                                <figure class="card-child-img">
+                                    <img src="img/bear.avif" alt="">
+
+                                </figure>
+
+                                <div class="card-child-text">
+                                    <h3 class="Exhibition-change-lang"></h3>
+                                    <p class="Exhibition-change-lang"></p>
+                                </div>
+                            </a>
+
+                        </article>
+                        <article class="card">
+
+                            <a href="html/personal-photograpy/personal-photograpy.html">
+                                <figure class="card-child-img">
+                                    <img src="img/personaslPic.jpg" alt="">
+
+                                </figure>
+
+                                <div class="card-child-text">
+                                    <h3 class="Exhibition-change-lang"></h3>
+                                    <p class="Exhibition-change-lang"></p>
+                                </div>
+                            </a>
+
+                        </article>
+
+                    </section>
+                </main>
+            </section>
+            <!-- exhipition end -->
+
+            <!-- services start -->
+            <section id="services-section">
+                <header>
+                    <h1 class="Services-change-lang"></h1>
+                    <p class="Services-change-lang"></p>
+                </header>
+
+                <main>
+                    <section class="cards-container">
+
+                    </section>
+                </main>
+            </section>
+            <!-- services end -->
+
+            <!-- contect me start -->
+            <section id="contect-me-section">
+                <header>
+                    <h1 class="contect-change-lang"></h1>
+                    <p class="contect-change-lang"></p>
+                </header>
+
+                <main>
+                    <section>
+                        <a href="https://wa.me/+905344888307" target="_blank"><img src="img/svg/contect-svgs/call-orange.svg" alt=""></a>
+                        <h5 class="contect-change-lang"></h5>
+                        <strong class="contect-change-lang"></strong>
+                    </section>
+
+                    <section>
+                        <span class="spcial-edit"><img src="img/svg/contect-svgs/emai-orange.svg" alt="" ></span>
+                        <h5 class="contect-change-lang"></h5>
+                        <p class="contect-change-lang"></p>
+                    </section>
+
+                    <section>
+                        <a href="https://maps.app.goo.gl/cXHnxN9xRJqJWV7p9"><img src="img/svg/contect-svgs/location-orange.svg" alt=""></a>
+                        <h5 class="contect-change-lang"></h5>
+                        <p class="contect-change-lang"></p>
+                    </section>
+
+                    <section>
+                        <a href="https://www.instagram.com/cj.ii4/"><img src="img/svg/contect-svgs/instagram-orange.svg" alt=""></a>
+                        <h5 class="contect-change-lang"></h5>
+                        <p class="contect-change-lang"></p>
+                    </section>
+                </main>
+            </section>
+            <!-- contect me end -->
+        </main>
+
+        <footer id="footer-footer">
+            <span>
+                © 2025 Ahmed the Photographer. All rights reserved
+            </span>
+        </footer>
+
+        <script type="module" defer src="js/langs/headerLang.js"></script>
+        <script type="module" defer src="js/langs/HomeLang.js"></script>
+        <script type="module" defer src="js/langs/MainLang.js"></script>
+        <script type="module" defer src="js/langs/ExhibitionLang.js"></script>
+        <script type="module" defer src="servicesLang.js"></script>
+        <script type="module" defer src="js/langs/contectLang.js"></script>
+        <script type="module" defer src="js/Main.js"></script>
+    </body>
 </html>

@@ -1,0 +1,74 @@
+:root{
+    --card-font-main-color:rgb(217, 119, 6);
+    --card-font-second-color:#fff;
+}
+
+#Exhibition-section{
+    margin: 0 auto;
+    width: 86%;
+    height: 100%;
+    padding-bottom: 5em;
+}
+#Exhibition-section header{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 5% 0;
+    font-size: clamp(0.6rem , 2vw , 1.4rem);
+}
+#Exhibition-section .cards-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(min(290px ,100%),1fr));
+    gap: 1.5em;
+}
+
+#Exhibition-section .cards-container .card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+#Exhibition-section .cards-container .card img{
+    width: 100%;
+    aspect-ratio: 4 / 4;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+#Exhibition-section .cards-container .card .card-child-text{
+    position: absolute;
+    text-align: end;
+    bottom: 0;
+    right: 0;
+    padding: 1.5em;
+    opacity: 0;
+    transition: 0.4s;
+    font-size: clamp(0.7rem , 2vw , 1rem);
+    color: var(--card-font-second-color);
+}
+
+#Exhibition-section .card-child-text h3{
+    color:var(--card-font-main-color);
+}
+
+#Exhibition-section .card:hover img{
+    filter:brightness(.5);
+    transform: scale(1.1);
+}
+
+#Exhibition-section .cards-container .card:hover .card-child-text{
+    opacity: 1;
+}
+
+@media (max-width: 740px){
+    #Exhibition-section{
+        height: fit-content;
+    }
+
+    #Exhibition-section .cards-container .card .card-child-text{
+        opacity: 1;
+        z-index: 999;
+    }
+    /* #Exhibition-section  */
+}

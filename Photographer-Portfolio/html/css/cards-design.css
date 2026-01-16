@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgColor:#0F172A; /*لون خلفيه*/
+    --secndaryBg:#141f38;
+    --text-main: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --animation-time: 23s; 
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bgColor);
+}
+
+main{
+    width: 100%;
+    margin: 5em 0 0 0;
+    min-height: calc(100vh - 70px);
+}
+.gallry-section::-webkit-scrollbar{
+    display: none;
+}
+.gallry-section{
+    margin: 0 auto clamp(1em , 3vw , 3em) auto;
+    width: 96%;
+    height: 100%;
+}
+
+.gallry-section .group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(min(400px , 100%) ,1fr));
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.8em;
+    gap: 3em;
+}
+
+.gallry-section figure{
+    transform: scale(0.8);
+    transform-style: preserve-3d;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    opacity: 0.2;
+    box-shadow:
+        0 15px 20px rgba(0,0,0,0.45);
+    border-radius: 14px;
+    transition: 0.4s ease-in-out;
+}
+
+/* anmtion */
+.gallry-section figure.show{
+    transform: 
+        scale(1);
+    opacity: 1;
+}
+
+.gallry-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+}
