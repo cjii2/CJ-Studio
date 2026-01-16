@@ -23,7 +23,7 @@
     height: 100vh;
 }
 
-#home-section video{
+#home-section #video{
     position: absolute;
     width: 100%;
     height: 100%;
