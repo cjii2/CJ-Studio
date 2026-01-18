@@ -9,7 +9,7 @@
     background-color: var(--obsidian-darkr);
 }
 
-#Exhibition-section::after{
+/*#Exhibition-section::after{
     content: "";
     position: absolute;
     background:linear-gradient(
@@ -21,8 +21,8 @@
     height: 10%;
     bottom: 0;
     left: 0; 
-    /* background-color: red; */
-}
+     background-color: red; 
+}*/
 
 #Exhibition-section .Exhibition-father-container{
     width: 78%;
@@ -89,6 +89,7 @@
 
     #Exhibition-section .cards-container .card .card-child-text{
         opacity: 1;
+        padding: 2em;
         z-index: 999;
     }
     /* #Exhibition-section  */

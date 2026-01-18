@@ -41,7 +41,7 @@
     margin: 0.5em 0;
     background-color: var(--obsidian-dark);
     color: var(--text-more-muted);
-    font-size: clamp(0.7rem, calc(1vw + .2rem), 1.2rem);
+    font-size: clamp(0.9rem, calc(1vw + .2rem), 1.6rem);
     padding: .3em .4em;
     border-radius: 15px;
     transition: .3s;
