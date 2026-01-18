@@ -1,11 +1,20 @@
 :root{
     --iconBg:#fce9a0;
+
     --text-main: #F9FAFB;
     --text-muted: #9CA3AF;
+    --text-more-muted:#d8d8d8;
+
+    --obsidian-black: #050505;
+    --obsidian-dark: #090c0f;
+    --obsidian-darkr:#030404;
+    --obsidian-gray: #121418;
+
+    --shadow-color: 10px 10px 10px rgba(0,0,0,.2);
 }
 
 #contect-me-section{
-    /* background-color: red; */
+    position: relative;
     height: 100%;
     width: 100%;
 }
@@ -15,8 +24,7 @@
     color: #fff;
 
     width: 100%;
-
-    margin: 2em 0;
+    margin: 0 0 5em 0;
 }
 
 #contect-me-section main{
@@ -24,7 +32,6 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 10px;
-    /* grid-auto-rows:60px; */
     margin: 0 auto 0 auto;
     padding-bottom: 5em;
     width: 100%;
@@ -39,31 +46,32 @@
     color: var(--text-muted);
 }
 
-#contect-me-section main section a{
+#contect-me-section main section a ,.spcial-edit{
     display: flex;
     justify-content: center;
     align-items: center;
     width: clamp(30px, 4vw, 50px);
     height: clamp(30px, 4vw, 50px);
     border-radius: 50%;
-    background-color: var(--iconBg);
+    background-color: var(--obsidian-dark);
     color: #ff7b00;
     grid-area: header;
     margin: 0 10px 0 0;
 }
-#contect-me-section main section .spcial-edit{
+
+/* #contect-me-section main section .spcial-edit{
     display: flex;
     justify-content: center;
     align-items: center;
     width: clamp(30px, 4vw, 50px);
     height: clamp(30px, 4vw, 50px);
     border-radius: 50%;
-    background-color: var(--iconBg);
+    background-color: var(--obsidian-dark);
     color: #ff7b00;
     grid-area: header;
     margin: 0 10px 0 0;
     
-}
+} */
 
 #contect-me-section main section img{
     width: clamp(15px, 2vw, 30px);
