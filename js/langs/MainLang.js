@@ -7,28 +7,11 @@ const languageBtn = document.getElementById("languageSelect");
 const headerData = {
     ar: ["عن المصور", 
         "أنا أحمد، مصور فوتوغرافي محترف مع أكثر من 10 سنوات من الخبرة في التصوير الفوتوغرافي. شغفي هو التقاط اللحظات الخاصة وتحويلها إلى ذكريات خالدة. أؤمن بأن كل صورة تحكي قصة، وهدفي هو سرد قصتك بأجمل طريقة ممكنة. من حفلات الزفاف إلى جلسات التصوير الشخصية، أضع قلبي وروحي في كل عمل.",
-
-        "15+",
-        "جائزه",
-
-        "300+",
-        "عميل سعيد",
-
-        "500+",
-        "جلسة تصوير",
-
-
     ],
 
     en: [
         "About the Photographer",
         "I am Ahmed, a professional photographer with over 10 years of experience, specializing in capturing meaningful moments and transforming them into timeless memories. Every photograph tells a story, and my mission is to tell yours with creativity and passion.",
-        "15+",
-        "Awards",
-        "300+",
-        "Happy Clients",
-        "500+",
-        "Photo Sessions"
     ]
 
 };

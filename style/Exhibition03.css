@@ -1,23 +1,45 @@
 :root{
     --card-font-main-color:rgb(217, 119, 6);
     --card-font-second-color:#fff;
+
+    --text-main: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --text-more-muted:#d8d8d8;
+
+    --obsidian-black: #050505;
+    --obsidian-dark: #090c0f;
+    --obsidian-darkr:#030404;
+    --obsidian-gray: #111827;;
+
+    --shadow-color: 10px 10px 10px rgba(0,0,0,.2);
 }
 
 #Exhibition-section{
+    user-select: none;
+    position: relative;
     margin: 0 auto;
-    width: 86%;
+    width: 100%;
     height: 100%;
     padding-bottom: 5em;
+    background-color: var(--obsidian-darkr);
 }
+
+
+#Exhibition-section .Exhibition-father-container{
+    width: 78%;
+    margin: 0 auto;
+}
+
 #Exhibition-section header{
     width: 100%;
     text-align: center;
-    color: #fff;
-    margin: 5% 0;
+    color: var(--text-more-muted);
     font-size: clamp(0.6rem , 2vw , 1.4rem);
 }
+
 #Exhibition-section .cards-container{
     width: 100%;
+    margin: 5% 0;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(min(290px ,100%),1fr));
     gap: 1.5em;
@@ -41,11 +63,11 @@
     text-align: end;
     bottom: 0;
     right: 0;
-    padding: 1.5em;
+    padding: 1em;
     opacity: 0;
     transition: 0.4s;
-    font-size: clamp(0.7rem , 2vw , 1rem);
-    color: var(--card-font-second-color);
+    font-size: clamp(0.7rem , 2vw , 1.4rem);
+    color: var(--text-muted);
 }
 
 #Exhibition-section .card-child-text h3{

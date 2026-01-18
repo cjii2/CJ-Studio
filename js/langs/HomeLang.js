@@ -5,15 +5,12 @@ const languageBtn = document.getElementById("languageSelect");
 // بيانات عنوان الصفحة قابله للتغير
 // رجاء عدد متواجد في عنوان يكون نفس يلي موجود في بيانات لن ينشئ هاذا سكربت هو فقط للتعديل
 const headerData = {
-    ar: ["مصور", 
-        "احمد",
+    ar: [
         "نلتقط اللحظات الثمينة ونحولها إلى ذكريات خالدة",
         "شاهد اعمالي",
     ],
 
     en: [
-        "Professional Photographer",
-        "Ahmed",
         "Capturing moments that last forever",
         "Explore My Portfolio"
     ]
