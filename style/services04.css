@@ -1,22 +1,3 @@
-:root{
-    --text-main: #F9FAFB;
-    --text-muted: #9CA3AF;
-
-    --card-font-main-color:rgb(217, 119, 6);
-    --card-font-second-color:#fff;
-
-    --text-main: #F9FAFB;
-    --text-muted: #9CA3AF;
-    --text-more-muted:#d8d8d8;
-
-    --obsidian-black: #050505;
-    --obsidian-dark: #090c0f;
-    --obsidian-darkr:#030404;
-    --obsidian-gray: #121418;
-
-    --shadow-color: 10px 10px 10px rgba(0,0,0,.2);
-}
-
 #services-section{
     width: 100%;
     height: 100%;
@@ -72,7 +53,7 @@
 
     color: var(--text-main);
 
-    background-color: var(--obsidian-gray);
+    background-color: var(--obsidian-dark);
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.144);
 
     transition: 0.5s;

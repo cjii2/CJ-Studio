@@ -1,22 +1,3 @@
-:root{
-    --header-bg: rgba(4, 7, 12, 0.253); /*لون خلفيه لل رائس*/ ;
-    
-    --text-main: #F9FAFB;
-    --text-muted: #9CA3AF;
-    --text-more-muted:#d8d8d8;
-
-    --obsidian-black: #050505;
-    --obsidian-dark: #090c0f;
-    --obsidian-gray: #121418;
-
-    --obs-btn-primary-bg: #F59E0B;   /* كهرماني */
-    --obs-btn-primary-text: #050505;
-    --obs-btn-primary-hover: #D97706;
-
-    --obs-link: #CBD5E1;
-    --obs-link-hover: #38BDF8;
-}
-
 #navbar-section{
     position: fixed;
 
