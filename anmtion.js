@@ -17,11 +17,9 @@ class videoAnimationScroll {
             if(isMobile) this.mobile();
 
         });
-
         history.scrollRestoration = "manual";
-        window.onbeforeunload = () => window.scrollTo(0, 0);
-
         window.addEventListener("load", () => {
+            window.scrollTo(0, 0);
             ScrollTrigger.refresh();
         });
 
@@ -30,10 +28,11 @@ class videoAnimationScroll {
     desktop() {
         if (!this.aboutme || this.aboutme.length === 0) return;
         if (!this.HomeElemnt || this.HomeElemnt.length === 0) return;
-        this.tl.from(this.HomeElemnt,{
+        gsap.from(this.HomeElemnt,{
             x:-40,
-            opacity:0,
+            autoAlpha:0,
             duration: 1,
+            invalidateOnRefresh: true,
             stagger: 0.2
         });
 
@@ -47,7 +46,6 @@ class videoAnimationScroll {
                 start: "0% 95%",
                 end: '100% 40%',
                 scrub:true,
-                invalidateOnRefresh: true
             }
         });
 
@@ -75,17 +73,16 @@ class videoAnimationScroll {
         );
         if(ser.length){
             gsap.from(ser,{
-                y: 40,
+                y: 60,
                 opacity: 0,
                 duration: 1,
-                stagger: 0.2,
+                stagger: 0.5,
                 scrollTrigger: {
                     trigger: "#services-section",
-                    start: "top 95%",
-                    end: "100% 96%",
+                    start: "top 90%",
+                    end: "100% 91%",
                     scrub:true,
-                    // invalidateOnRefresh:true
-                    // markers:true
+                    invalidateOnRefresh:true,
                 }
             });
         }
@@ -95,7 +92,7 @@ class videoAnimationScroll {
         );
         if(con.length){
             gsap.from(con,{
-                y: 40,
+                y: 100,
                 opacity: 0,
                 duration: 1,
                 stagger: 0.2,
@@ -134,7 +131,7 @@ class videoAnimationScroll {
         });
 
         gsap.from(`#Exhibition-section .card , #Exhibition-section h1, #Exhibition-section p`,{
-            y: 40,
+            y:"40px",
             opacity: 0,
             duration: 1,
             stagger: 0.2,
@@ -146,22 +143,24 @@ class videoAnimationScroll {
             }
         });
 
-        gsap.from(`#services-section .card , #services-section h1, #services-section p`,{
-            y: 40,
+        gsap.from(`#services-section .card , #services-section .servers-anmtion`,{
+            // y: 40,
             opacity: 0,
             duration: 1,
-            stagger: 0.2,
+            stagger: 0.1,
             scrollTrigger: {
                 trigger: "#services-section",
                 start: "top 95%",
                 end: "100% 96%",
                 scrub:true,
+                // toggleActions:'play none none none',
+                invalidateOnRefresh:true,
                 // markers:true
             }
         });
         
         gsap.from(`#contect-me-section section , #contect-me-section h1, #contect-me-section p`,{
-            y: 40,
+            y: 100,
             opacity: 0,
             duration: 1,
             stagger: 0.2,
