@@ -17,21 +17,21 @@
 
     <body>
         <!-- قائمه يلي فوق اول شي  -->
-        <button type="button" id="openSideBar"><img src="img/svg/menu.svg" alt=""></button>
+        <button type="button" class="Home-elemnt-anmtion" id="openSideBar"><img src="img/svg/menu.svg" alt=""></button>
         <header id="navbar-section">
             <nav class="nav-links">
                 <div class="logo">
-                    <button type="button" id="closeSideBar">X</button>
-                    <img src="img/svg/serivec-svgs/camera-temp.svg" alt="">
+                    <button  type="button" id="closeSideBar">X</button>
+                    <img class="Home-elemnt-anmtion" src="img/svg/serivec-svgs/camera-temp.svg" alt="">
                 </div>
                 <ul>
-                    <li><a href="#home-section"></a></li>
-                    <li><a href="#about-me"></a></li>
-                    <li><a href="#Exhibition-section"></a></li>
-                    <li><a href="#services-section"></a></li>
-                    <li><a href="#contect-me-section"></a></li>
+                    <li class="Home-elemnt-anmtion"><a href="#home-section"></a></li>
+                    <li class="Home-elemnt-anmtion"><a href="#about-me"></a></li>
+                    <li class="Home-elemnt-anmtion"><a href="#Exhibition-section"></a></li>
+                    <li class="Home-elemnt-anmtion"><a href="#services-section"></a></li>
+                    <li class="Home-elemnt-anmtion"><a href="#contect-me-section"></a></li>
 
-                    <select id="languageSelect">
+                    <select class="Home-elemnt-anmtion" id="languageSelect">
                         <option value="ar">العربية</option>
                         <option value="en">English</option>
                     </select>
@@ -48,9 +48,8 @@
                 <video id="video" src="video/potoPro.mp4" loading="lazy" muted loop autoplay ></video>
 
                 <header class="home-header">
-                    <!-- <h1 class="Home-Change-lang">مصور <span class="Home-Change-lang">احمد</span></h1> -->
-                    <h6 class="Home-Change-lang">نلتقط اللحظات الثمينة ونحولها إلى ذكريات خالدة</h6>
-                    <a href="#Exhibition-section" id="Exhibition" class="Home-Change-lang">شاهد اعمالي</a>
+                    <h6 class="Home-Change-lang Home-elemnt-anmtion">نلتقط اللحظات الثمينة ونحولها إلى ذكريات خالدة</h6>
+                    <a href="#Exhibition-section" id="Exhibition" class="Home-Change-lang Home-elemnt-anmtion">شاهد اعمالي</a>
                 </header>
                 
             </section>
@@ -262,6 +261,9 @@
         <script type="module" defer src="servicesLang.js"></script>
         <script type="module" defer src="js/langs/contectLang.js"></script>
         <script type="module" defer src="js/Main.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
         <script type="module" src="anmtion.js"></script>
     </body>
 </html>

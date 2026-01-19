@@ -1,22 +1,56 @@
-import { gsap } from "gsap";
-// import { Flip } from "gsap/Flip";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 class videoAnimationScroll {
     constructor() {
         gsap.registerPlugin(ScrollTrigger);
-        this.tl = null;
+        this.tl = gsap.timeline();
         this.mm = gsap.matchMedia();
-        // this.video = document.querySelector("#video");
-        // this.container = document.querySelector("#home-section");
+        // this.headerElemnt = document.querySelectorAll('.header-elemnt-anmtion');
+        this.HomeElemnt = document.querySelectorAll('.Home-elemnt-anmtion');
+    }
+    activeANM(){
+        this.mm.add({
+            isMobile:"(max-width:500px)",
+            isDesktop:"(min-width: 501px)"
+        },(context) =>{
+            let {isMobile , isDesktop} = context.conditions;
+
+            if(isDesktop){
+                this.desktop();
+                return
+            }
+
+            if(isMobile){
+                this.mobile();
+                return
+            }
+
+        }
+    )
     }
 
-    scroll() {
+    desktop() {
+        addEventListener('DOMContentLoaded',()=>{
+            this.tl.from(this.HomeElemnt,{
+                x:-40,
+                opacity:0,
+                duration: 1,
+                stagger: 0.2
+            })
+        })
+    }
 
+    mobile(){
+        return (
+            this.tl.from(this.headerElemnt,{
+                x:-10,
+                opacity:0,
+                duration: 0.6,
+                stagger: 0.2
+            })
+        )
     }
 
     activeApp() {
-        this.scroll();
+        this.activeANM();
         // this.scrollwithOutGsap();
     }
 }
