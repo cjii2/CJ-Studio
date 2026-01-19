@@ -63,7 +63,7 @@ class videoAnimationScroll {
             stagger: 0.2,
             scrollTrigger: {
                 trigger: "#services-section",
-                start: "0% 95%",
+                start: "top 95%",
                 end: "100% 96%",
                 scrub:true,
             }
@@ -128,7 +128,7 @@ class videoAnimationScroll {
                 trigger: "#services-section",
                 start: "top 95%",
                 end: "100% 96%",
-                // scrub:true,
+                scrub:true,
                 // markers:true
             }
         });
