@@ -3,7 +3,7 @@ class videoAnimationScroll {
         gsap.registerPlugin(ScrollTrigger);
         this.tl = gsap.timeline();
         this.mm = gsap.matchMedia();
-        // this.headerElemnt = document.querySelectorAll('.header-elemnt-anmtion');
+        this.aboutme = document.querySelectorAll('.about-me-anmtion');
         this.HomeElemnt = document.querySelectorAll('.Home-elemnt-anmtion');
     }
     activeANM(){
@@ -13,45 +13,61 @@ class videoAnimationScroll {
         },(context) =>{
             let {isMobile , isDesktop} = context.conditions;
 
-            if(isDesktop){
-                this.desktop();
-                return
-            }
+            if(isDesktop) this.desktop();
+            if(isMobile) this.mobile();
 
-            if(isMobile){
-                this.mobile();
-                return
-            }
-
-        }
-    )
+        });
     }
 
     desktop() {
-        addEventListener('DOMContentLoaded',()=>{
-            this.tl.from(this.HomeElemnt,{
-                x:-40,
-                opacity:0,
-                duration: 1,
-                stagger: 0.2
-            })
+        if (!this.aboutme || this.aboutme.length === 0) return;
+        if (!this.HomeElemnt || this.HomeElemnt.length === 0) return;
+        this.tl.from(this.HomeElemnt,{
+            x:-40,
+            opacity:0,
+            duration: 1,
+            stagger: 0.2
         })
+
+        gsap.from(this.aboutme, {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: "#about-me",
+                start: "0% 95%",
+            }
+        });
+
     }
 
-    mobile(){
-        return (
-            this.tl.from(this.headerElemnt,{
-                x:-10,
-                opacity:0,
-                duration: 0.6,
-                stagger: 0.2
-            })
-        )
+    mobile() {
+        if (!this.aboutme || this.aboutme.length === 0) return;
+        if (!this.HomeElemnt || this.HomeElemnt.length === 0) return;
+        this.tl.from(this.headerElemnt, {
+            x: -40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2
+        });
+
+        gsap.from(this.aboutme, {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: "#about-me",
+                start: "0% 95%",
+                end: "bottom bottom",
+                scrub: true,
+            }
+        });
     }
 
     activeApp() {
         this.activeANM();
-        // this.scrollwithOutGsap();
     }
 }
 
