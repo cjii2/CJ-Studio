@@ -20,5 +20,5 @@ closeSideBar.addEventListener('click',()=>{
     document.getElementById("navbar-section").classList.remove("active");
     OpensideBar.classList.remove("hide")
 })
-
-window.addEventListener('resize',videoChange());
+videoChange();
+window.addEventListener('resize',videoChange);
