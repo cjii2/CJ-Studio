@@ -1,53 +1,56 @@
+gsap.registerPlugin(ScrollTrigger);
 class videoAnimationScroll {
     constructor() {
-        gsap.registerPlugin(ScrollTrigger);
         this.tl = gsap.timeline();
         this.mm = gsap.matchMedia();
-        this.aboutme = document.querySelectorAll('.about-me-anmtion');
-        this.HomeElemnt = document.querySelectorAll('.Home-elemnt-anmtion');
+        this.breakPoint = 1000;
     }
-    activeANM(){
+    activeANM() {
         this.mm.add({
-            isMobile:"(max-width:700px)",
-            isDesktop:"(min-width: 701px)"
-        },(context) =>{
-            let {isMobile , isDesktop} = context.conditions;
+            isMobile: `(max-width:${this.breakPoint - 500}px)`,
+            isDesktop: `(min-width:${this.breakPoint}px)`,
+            isTablet: `(min-width: ${this.breakPoint - 499}px) and (max-width:${this.breakPoint - 1}px)`
+        }, (context) => {
+            const { isMobile, isDesktop ,isTablet} = context.conditions;
 
-            if(isDesktop) this.desktop();
-            if(isMobile) this.mobile();
-
+            if (isDesktop) this.desktop();
+            if (isTablet) this.tablet();
+            if (isMobile) this.mobile();
         });
-        history.scrollRestoration = "manual";
-        window.addEventListener("load", () => {
-            window.scrollTo(0, 0);
-            ScrollTrigger.refresh();
-        });
-
     }
+
 
     desktop() {
-        if (!this.aboutme || this.aboutme.length === 0) return;
-        if (!this.HomeElemnt || this.HomeElemnt.length === 0) return;
-        gsap.from(this.HomeElemnt,{
+        console.log('pc');
+        const homeAn = gsap.utils.toArray(
+            '.Home-elemnt-anmtion'
+        );
+        if(!homeAn.length) return;
+        gsap.from(homeAn,{
             x:-40,
             autoAlpha:0,
             duration: 1,
-            invalidateOnRefresh: true,
             stagger: 0.2
         });
 
-        gsap.from(this.aboutme, {
-            y: 40,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: "#about-me",
-                start: "0% 95%",
-                end: '100% 40%',
-                scrub:true,
-            }
-        });
+        const aboutAn = gsap.utils.toArray(
+            '.about-me-anmtion'
+        );
+        if(aboutAn.length){
+            gsap.from(aboutAn, {
+                y: 40,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.3,
+                scrollTrigger: {
+                    trigger: "#about-me",
+                    start: "0% 95%",
+                    end: '100% 45%',
+                    scrub:true,
+                    
+                }
+            });
+        }
 
         const ex = gsap.utils.toArray(
             '#Exhibition-section .card , #Exhibition-section .Exhibition-anmtion'
@@ -57,13 +60,13 @@ class videoAnimationScroll {
                 y: 40,
                 opacity: 0,
                 duration: 1,
-                stagger: 0.2,
+                stagger: 0.4,
                 scrollTrigger: {
                     trigger: "#Exhibition-section",
                     start: "0% 95%",
                     end: "50% 60%",
                     scrub:true,
-                    // markers:true
+                    
                 }
             });
         }
@@ -76,13 +79,14 @@ class videoAnimationScroll {
                 y: 60,
                 opacity: 0,
                 duration: 1,
-                stagger: 0.5,
+                stagger: 0.7,
                 scrollTrigger: {
                     trigger: "#services-section",
-                    start: "top 90%",
-                    end: "100% 91%",
+                    start: "top 85%",
+                    end: "100% 90%",
                     scrub:true,
                     invalidateOnRefresh:true,
+                    
                 }
             });
         }
@@ -107,59 +111,154 @@ class videoAnimationScroll {
         }
     }
 
-    mobile() {
-        if (!this.aboutme || this.aboutme.length === 0) return;
-        if (!this.HomeElemnt || this.HomeElemnt.length === 0) return;
-        this.tl.from('#openSideBar', {
-            x: -40,
-            opacity: 0,
+    tablet(){
+        console.log('tablet');
+
+        const homeAn = gsap.utils.toArray(
+            '.Home-elemnt-anmtion'
+        );
+        if(!homeAn.length) return;
+        gsap.from(homeAn,{
+            x:-40,
+            autoAlpha:0,
             duration: 1,
             stagger: 0.2
         });
 
-        gsap.from(this.aboutme, {
-            y: 40,
+        const aboutAn = gsap.utils.toArray(
+            '.about-me-anmtion'
+        );
+        if(aboutAn.length){
+            gsap.from(aboutAn, {
+                y: 40,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.3,
+                scrollTrigger: {
+                    trigger: "#about-me",
+                    start: "0% 95%",
+                    end: '100% 45%',
+                    scrub:true,
+                    
+                }
+            });
+        }
+
+        const ex = gsap.utils.toArray(
+            '#Exhibition-section .card , #Exhibition-section .Exhibition-anmtion'
+        );
+        if (ex.length){
+            gsap.from(ex,{
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.4,
+                scrollTrigger: {
+                    trigger: "#Exhibition-section",
+                    start: "0% 95%",
+                    end: "bottom 90%",
+                    scrub:true,
+                    
+                }
+            });
+        }
+
+        const ser = gsap.utils.toArray(
+            `#services-section .card , #services-section .servers-anmtion`
+        );
+        if(ser.length){
+            gsap.from(ser,{
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.7,
+                scrollTrigger: {
+                    trigger: "#services-section",
+                    start: "top 85%",
+                    end: "100% 75%",
+                    scrub:true,
+                    invalidateOnRefresh:true,
+                    
+                }
+            });
+        }
+
+        const con = gsap.utils.toArray(
+            `#contect-me-section section , #contect-me-section h1, #contect-me-section p`
+        );
+        if(con.length){
+            gsap.from(con,{
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: "#contect-me-section",
+                    start: "top 95%",
+                    end: "100% 96%",
+                    scrub:true,
+                    invalidateOnRefresh:true,
+                    
+                }
+            });
+        }
+    }
+    mobile() {
+        console.log('mobile');
+        const aboutAn = gsap.utils.toArray(
+            '.about-me-anmtion'
+        );
+        this.tl.from('#openSideBar', {
+            x: -50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2
+        })
+
+        
+        .from(aboutAn, {
+            y: 60,
             opacity: 0,
             duration: 1,
             stagger: 0.2,
             scrollTrigger: {
                 trigger: "#about-me",
                 start: "0% 95%",
-                end: "bottom bottom",
+                end: "bottom 70%",
                 scrub: true,
             }
-        });
+        })
 
-        gsap.from(`#Exhibition-section .card , #Exhibition-section h1, #Exhibition-section p`,{
-            y:"40px",
+        .from(`#Exhibition-section .card , #Exhibition-section .Exhibition-anmtion`,{
+            y:60,
             opacity: 0,
             duration: 1,
             stagger: 0.2,
             scrollTrigger: {
                 trigger: "#Exhibition-section",
                 start: "0% 95%",
-                end: "100% 80%",
+                end: "100% 90%",
                 scrub:true,
+                
             }
-        });
+        })
 
-        gsap.from(`#services-section .card , #services-section .servers-anmtion`,{
-            // y: 40,
+        .from(`#services-section .card , #services-section .servers-anmtion`,{
+            y: 60,
             opacity: 0,
-            duration: 1,
-            stagger: 0.1,
+            duration: 1.5,
+            stagger: 0.2,
             scrollTrigger: {
                 trigger: "#services-section",
                 start: "top 95%",
-                end: "100% 96%",
+                end: "100% 85%",
                 scrub:true,
-                // toggleActions:'play none none none',
                 invalidateOnRefresh:true,
                 // markers:true
             }
-        });
+        })
         
-        gsap.from(`#contect-me-section section , #contect-me-section h1, #contect-me-section p`,{
+        .from(`#contect-me-section section , #contect-me-section h1, #contect-me-section p`,{
             y: 100,
             opacity: 0,
             duration: 1,
@@ -169,6 +268,7 @@ class videoAnimationScroll {
                 start: "0% 95%",
                 end: "100% 96%",
                 scrub:true,
+
             }
         });
     }
