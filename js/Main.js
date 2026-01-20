@@ -21,4 +21,4 @@ closeSideBar.addEventListener('click',()=>{
     OpensideBar.classList.remove("hide")
 })
 
-window.addEventListener('resize',videoChange);
+window.addEventListener('resize',videoChange());
